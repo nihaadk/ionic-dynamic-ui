@@ -1,5 +1,5 @@
-import { Icon } from "ionicons/dist/types/components/icon/icon";
-import { Parameter } from "./parameter.interface";
+import { Icon } from 'ionicons/dist/types/components/icon/icon';
+import { Parameter } from './parameter.interface';
 
 export interface Invoker {
   t: string;

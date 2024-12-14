@@ -1,5 +1,5 @@
-import { Invoker } from "./invoker.interface";
+import { Invoker } from './invoker.interface';
 
 export interface ShortcutInvoker extends Invoker {
-    tempParamkey: string;
+  tempParamkey: string;
 }

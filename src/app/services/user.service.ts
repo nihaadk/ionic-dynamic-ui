@@ -22,8 +22,10 @@ export class UserService {
   getTasks(): Observable<Menu> {
     const url: string = `${this.url}/objects/USER_TASKS`;
     return this.#httpClient.get<Menu>(url).pipe(
-      tap(menu => this.#dynamicRouterService.loadDynamicRoutes(menu.subMenus)),
-      tap(value => console.log(value)),
+      tap((menu) =>
+        this.#dynamicRouterService.loadDynamicRoutes(menu.subMenus),
+      ),
+      tap((value) => console.log(value)),
     );
   }
 

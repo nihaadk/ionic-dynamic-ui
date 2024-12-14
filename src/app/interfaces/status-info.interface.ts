@@ -1,6 +1,6 @@
 export interface StatusInfo {
-    label: string;
-    color: string;
-    tooltip: string;
-    type: string;
+  label: string;
+  color: string;
+  tooltip: string;
+  type: string;
 }

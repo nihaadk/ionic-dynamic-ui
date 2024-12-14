@@ -1,10 +1,10 @@
-import { BehaviorInvoker } from "./behavior-invoker.interface";
-import { DragAndDrop } from "./drag-and-drop.interfac";
-import { Icon } from "./icon.interface";
-import { Invoker } from "./invoker.interface";
-import { ObjClass } from "./obj-class.interface";
-import { ShortcutInvoker } from "./shortcut-invoker.interface";
-import { StatusInfo } from "./status-info.interface";
+import { BehaviorInvoker } from './behavior-invoker.interface';
+import { DragAndDrop } from './drag-and-drop.interfac';
+import { Icon } from './icon.interface';
+import { Invoker } from './invoker.interface';
+import { ObjClass } from './obj-class.interface';
+import { ShortcutInvoker } from './shortcut-invoker.interface';
+import { StatusInfo } from './status-info.interface';
 
 export interface Item {
   objId: number;

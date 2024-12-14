@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  server: 'https://p-p.portal.tie.ch',
+  username: 'pp_demo_user',
+  password: '.8ByMKeQgBuVAt-',
 };

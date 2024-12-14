@@ -1,4 +1,4 @@
 export interface FlexGridOptions {
-    fitToContainer: boolean;
-    wordWrap: boolean;
+  fitToContainer: boolean;
+  wordWrap: boolean;
 }

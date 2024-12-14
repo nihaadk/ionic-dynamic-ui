@@ -1,0 +1,45 @@
+<form [formGroup]="form">
+  <ion-list>
+    @for (item of controls; track $index) {
+      @if (item.tag === "SELECT") {
+        <ion-item>
+          <ion-label position="stacked">{{ item.displayName }}</ion-label>
+          <ion-select
+            [formControlName]="item.attributeName"
+            [name]="item.attributeName"
+          >
+            @for (option of item.options; track $index) {
+              <ion-select-option [value]="option.internalValue">
+                {{ option.displayValue }}
+              </ion-select-option>
+            }
+          </ion-select>
+        </ion-item>
+      }
+      @if (item.tag === "TEXT") {
+        <ion-item>
+          <ion-label position="stacked">{{ item.displayName }}</ion-label>
+          <ion-input
+            [formControlName]="item.attributeName"
+            name="{{ item.attributeName }}"
+            [required]="item.mandatory"
+            [readonly]="item.readonly"
+            type="text"
+          ></ion-input>
+        </ion-item>
+      }
+    }
+  </ion-list>
+
+  <div class="ion-padding">
+    <ion-buttons>
+      @for (button of buttons; track $index) {
+        <ion-button
+          (click)="button.tag === 'BUTTON_CLOSE' ? onCancel() : onSubmit()"
+        >
+          {{ button.displayName }}
+        </ion-button>
+      }
+    </ion-buttons>
+  </div>
+</form>

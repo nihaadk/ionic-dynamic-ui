@@ -1,4 +1,3 @@
-
 import { Invoker } from './invoker.interface';
 import { Path } from './path.interface';
 import { SubMenu } from './submenu.interface';

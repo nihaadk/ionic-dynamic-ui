@@ -1,4 +1,3 @@
-
 export interface Icon {
   t: string;
   label: string;

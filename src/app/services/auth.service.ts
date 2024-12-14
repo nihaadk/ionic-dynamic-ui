@@ -13,10 +13,10 @@ export class AuthService {
     username: environment.username,
     password: environment.password,
   };
-  
+
   login(): void {
     this.#httpClient
-      .post(this.url, this.authBody,{ responseType: 'text' })
+      .post(this.url, this.authBody, { responseType: 'text' })
       .subscribe((res) => this.setToken(res));
   }
 

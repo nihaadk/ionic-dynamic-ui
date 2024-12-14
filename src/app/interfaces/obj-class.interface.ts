@@ -1,4 +1,4 @@
 export interface ObjClass {
-    objclassId: number;
-    type: string;
+  objclassId: number;
+  type: string;
 }

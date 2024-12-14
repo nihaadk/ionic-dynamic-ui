@@ -1,31 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>dynamic</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">dynamic</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <ion-content class="ion-padding">
     @for (object of objects(); track $index) {
       @switch (object.t) {
-        @case ('Form'){
-          <h1>String</h1>
+        @case ("Objlist") {
+          <app-list-view [objList]="object" />
+        }
+        @case ("Form") {
+          <app-form-view [objForm]="object" />
         }
         @default {
-          <h1>Default</h1>
+          <h1>New View</h1>
         }
-          
       }
     }
-
-
   </ion-content>
-
-
 </ion-content>

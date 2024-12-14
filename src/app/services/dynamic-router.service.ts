@@ -21,9 +21,5 @@ export class DynamicRouterService {
         this.#router.config.push(route);
       }
     });
-
-    console.log('new router cofnig', this.#router.config);
   }
-
-
 }

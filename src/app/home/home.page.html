@@ -9,13 +9,18 @@
 <ion-content class="ion-padding">
   <ion-grid>
     @for (submenu of menu()?.subMenus; track $index) {
-    <ion-row>
-      <ion-col>
-        <ion-button (dblclick)="navigateToTask(submenu)" size="large" expand="block" color="primary">
-          {{ submenu?.name }}
-        </ion-button>
-      </ion-col>
-    </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button
+            (dblclick)="navigateToTask(submenu)"
+            size="large"
+            expand="block"
+            color="primary"
+          >
+            {{ submenu?.name }}
+          </ion-button>
+        </ion-col>
+      </ion-row>
     }
   </ion-grid>
 </ion-content>
