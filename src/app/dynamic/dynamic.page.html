@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>dynamic</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">dynamic</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    @for (object of objects(); track $index) {
+      @switch (object.t) {
+        @case ('Form'){
+          <h1>String</h1>
+        }
+        @default {
+          <h1>Default</h1>
+        }
+          
+      }
+    }
+
+
+  </ion-content>
+
+
+</ion-content>

@@ -1,0 +1,14 @@
+{
+  "/auth-service/**": {
+    "target": "https://p-p.portal.tie.ch",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/rest2/**": {
+    "target": "https://p-p.portal.tie.ch",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}
