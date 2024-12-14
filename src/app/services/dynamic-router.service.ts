@@ -9,13 +9,20 @@ import { SubMenu } from '../interfaces/submenu.interface';
 export class DynamicRouterService {
   #router = inject(Router);
 
-  loadDynamicRoutes(subMenus: SubMenu[]): void {
-    const dynamicRoutes: Route[] = subMenus.map((subMenu) => ({
+  addNewRoutes(subMenus: SubMenu[]): void {
+    const dynamicRoutes: Route[] = this.mapRouteArray(subMenus);
+    this.addToRouteConfig(dynamicRoutes);
+  }
+
+  private mapRouteArray(subMenus: SubMenu[]): Route[] {
+    return subMenus.map((subMenu) => ({
       path: subMenu.name.toLocaleLowerCase(),
       component: DynamicPage,
       data: { invokers: subMenu.invokers },
     }));
+  }
 
+  private addToRouteConfig(dynamicRoutes: Route[]): void {
     dynamicRoutes.forEach((route) => {
       if (!this.#router.config.find((r) => r.path === route.path)) {
         this.#router.config.push(route);

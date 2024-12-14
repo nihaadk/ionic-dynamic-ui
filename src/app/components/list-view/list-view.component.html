@@ -1,0 +1,14 @@
+<ion-list class="ion-margin">
+  <ion-list-header>
+    <ion-label>{{ objList()?.objName }}</ion-label>
+  </ion-list-header>
+
+  @for (obj of objList()?.items; track $index) {
+    <ion-item>
+      <ion-label> {{ obj?.objName }} </ion-label>
+      <ion-badge slot="end" [style.backgroundColor]="obj?.statusInfo?.color">{{
+        obj?.statusInfo?.label
+      }}</ion-badge>
+    </ion-item>
+  }
+</ion-list>

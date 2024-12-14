@@ -28,7 +28,6 @@ import { ObjForm } from 'src/app/interfaces/obj-form.interface';
     IonButton,
   ],
   templateUrl: './form-view.component.html',
-  styleUrl: './form-view.component.css',
 })
 export class FormViewComponent implements OnInit {
   #formBuilder = inject(FormBuilder);

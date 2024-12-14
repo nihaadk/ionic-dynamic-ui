@@ -4,11 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import {
   IonBackButton,
-  IonButton,
   IonButtons,
   IonContent,
   IonHeader,
-  IonTitle,
   IonToolbar,
 } from '@ionic/angular/standalone';
 import { Subscription } from 'rxjs';
@@ -29,10 +27,8 @@ type ObjectType = Objlist | ObjForm;
   imports: [
     IonBackButton,
     IonButtons,
-    IonButton,
     IonContent,
     IonHeader,
-    IonTitle,
     IonToolbar,
     CommonModule,
     FormsModule,
@@ -49,12 +45,12 @@ export class DynamicPage implements OnInit, OnDestroy {
 
   private subscriptions = new Subscription();
 
-  ngOnDestroy(): void {
-    this.subscriptions.unsubscribe();
-  }
-
   ngOnInit() {
     this.getObjects(this.invokers);
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.unsubscribe();
   }
 
   private get invokers(): Invoker[] {

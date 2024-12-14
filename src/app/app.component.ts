@@ -12,6 +12,7 @@ export class AppComponent {
   #authService = inject(AuthService);
 
   constructor() {
+    // Automatic Login only for demonstration purposes
     this.#authService.login();
   }
 }
